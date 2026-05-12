@@ -79,7 +79,6 @@ tooltip {
   background-color: rgba(7,25,35,0.62);
   border: 2px solid @border;
   border-radius: 8px;
-  /*padding: 8px 12px;*/
 }
 
 tooltip * {
@@ -90,7 +89,6 @@ tooltip * {
 }
 
 tooltip label {
-  /*background-color: @waybarBg;*/
   color: @foreground;
   font-size: 13px;
   font-weight: 700;
