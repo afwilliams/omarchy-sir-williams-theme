@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+THEME_NAME="sir-williams"
+SOURCE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+TARGET_DIR="$HOME/.config/omarchy/themes/$THEME_NAME"
+
+mkdir -p "$TARGET_DIR"
+
+rsync -a --delete \
+  --exclude ".git" \
+  --exclude "scripts" \
+  --exclude ".gitignore" \
+  "$SOURCE_DIR/" \
+  "$TARGET_DIR/"
+
+echo "Installed $THEME_NAME to $TARGET_DIR"
+echo "Run: omarchy theme set \"Sir Williams\""
